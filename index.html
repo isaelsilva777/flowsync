@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FlowSync — AI-powered productivity platform. Sync tasks, communication and goals in one intelligent dashboard.">
+    <title>FlowSync — Ship Faster, Together</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Grain texture overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Ambient background orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar" id="top">
+        <div class="nav-wrap">
+            <a href="#" class="logo">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <rect width="10" height="10" rx="3" fill="#7c3aed" />
+                    <rect x="12" y="0" width="10" height="10" rx="3" fill="#a855f7" opacity=".6" />
+                    <rect x="0" y="12" width="10" height="10" rx="3" fill="#a855f7" opacity=".6" />
+                    <rect x="12" y="12" width="10" height="10" rx="3" fill="#7c3aed" opacity=".3" />
+                </svg>
+                FlowSync
+            </a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#features">Features</a>
+                <a href="#how">How it works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#about">About</a>
+            </nav>
+            <div class="nav-right">
+                <a href="#" class="link-muted">Log in</a>
+                <a href="#" class="btn-cta">Get started free</a>
+            </div>
+            <button class="burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mob-nav" id="mobNav">
+            <a href="#features">Features</a>
+            <a href="#how">How it works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#" class="btn-cta" style="text-align:center">Get started free</a>
+        </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+
+        <!-- Glow behind headline -->
+        <div class="hero-glow" aria-hidden="true"></div>
+
+        <div class="hero-eyebrow">
+            <span class="dot-pulse"></span>
+            Now in public beta — <strong>1,200+ teams</strong> already synced
+        </div>
+
+        <h1 class="hero-h1">
+            The workspace your<br>
+            team actually <span class="shimmer-text" id="rotateWord">ships in.</span>
+        </h1>
+
+        <p class="hero-p">
+            FlowSync unifies tasks, chat and OKRs in one AI-powered dashboard.<br class="br-hide">
+            Less switching. More shipping.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#" class="btn-cta btn-lg">
+                Start for free
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+            <a href="#" class="btn-ghost-lg">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4" />
+                    <path d="M6.5 5.5l4 2.5-4 2.5V5.5z" fill="currentColor" />
+                </svg>
+                Watch demo (2 min)
+            </a>
+        </div>
+
+        <p class="hero-fine">No card required · Cancel anytime · SOC 2 compliant</p>
+
+        <!-- Product screenshot -->
+        <div class="product-frame">
+            <div class="frame-topbar">
+                <div class="frame-dots">
+                    <span class="fdot r"></span><span class="fdot y"></span><span class="fdot g"></span>
+                </div>
+                <div class="frame-url">app.flowsync.io/dashboard</div>
+                <div style="width:60px"></div>
+            </div>
+            <div class="frame-body">
+                <!-- Left sidebar -->
+                <div class="f-sidebar">
+                    <div class="f-sidebar-logo">FS</div>
+                    <nav class="f-sidebar-nav">
+                        <a class="f-link active"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                                <rect x="1" y="1" width="6" height="6" rx="1.5" />
+                                <rect x="9" y="1" width="6" height="6" rx="1.5" />
+                                <rect x="1" y="9" width="6" height="6" rx="1.5" />
+                                <rect x="9" y="9" width="6" height="6" rx="1.5" />
+                            </svg> Overview</a>
+                        <a class="f-link"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M3 5h10M3 8h7M3 11h5" />
+                                <rect x="1" y="1" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.2"
+                                    fill="none" />
+                            </svg> Tasks</a>
+                        <a class="f-link"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M14 10c0 1.1-.9 2-2 2H4l-3 3V4c0-1.1.9-2 2-2h9c1.1 0 2 .9 2 2v6z" />
+                            </svg> Messages <span class="badge">3</span></a>
+                        <a class="f-link"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2" fill="none" />
+                                <path d="M8 5v3l2 2" />
+                            </svg> Goals</a>
+                    </nav>
+                    <div class="f-sidebar-foot">
+                        <div class="f-avatar">EM</div>
+                        <div>
+                            <div class="f-name">Ethan M.</div>
+                            <div class="f-role">Admin</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main content -->
+                <div class="f-main">
+                    <div class="f-header">
+                        <div>
+                            <div class="f-title">Good morning, Ethan 👋</div>
+                            <div class="f-sub">Thursday, Feb 26 · Sprint 14 in progress</div>
+                        </div>
+                        <button class="f-btn">+ New task</button>
+                    </div>
+
+                    <!-- Stat row -->
+                    <div class="f-stats">
+                        <div class="f-stat">
+                            <div class="f-stat-val" style="color:#a855f7">24</div>
+                            <div class="f-stat-label">Done this week</div>
+                            <div class="f-stat-trend up">↑ 18%</div>
+                        </div>
+                        <div class="f-stat">
+                            <div class="f-stat-val" style="color:#38bdf8">8</div>
+                            <div class="f-stat-label">In progress</div>
+                            <div class="f-stat-trend">→ on track</div>
+                        </div>
+                        <div class="f-stat">
+                            <div class="f-stat-val" style="color:#34d399">94%</div>
+                            <div class="f-stat-label">Sprint velocity</div>
+                            <div class="f-stat-trend up">↑ 6%</div>
+                        </div>
+                        <div class="f-stat">
+                            <div class="f-stat-val">12</div>
+                            <div class="f-stat-label">Team online</div>
+                            <div class="f-stat-trend">● live</div>
+                        </div>
+                    </div>
+
+                    <!-- Task list -->
+                    <div class="f-tasks">
+                        <div class="f-task-head">Active tasks</div>
+                        <div class="f-task done">
+                            <span class="f-check done-c">✓</span>
+                            <span class="f-task-text">Design onboarding flow v2</span>
+                            <span class="f-tag design">Design</span>
+                        </div>
+                        <div class="f-task inprog">
+                            <span class="f-check prog-c"></span>
+                            <span class="f-task-text">Integrate AI assistant module</span>
+                            <span class="f-tag eng">Engineering</span>
+                        </div>
+                        <div class="f-task">
+                            <span class="f-check"></span>
+                            <span class="f-task-text">Write Q2 OKR documentation</span>
+                            <span class="f-tag plan">Planning</span>
+                        </div>
+                        <div class="f-task">
+                            <span class="f-check"></span>
+                            <span class="f-task-text">Review API rate limiting strategy</span>
+                            <span class="f-tag eng">Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="float-badge badge-a">
+            <span class="badge-icon">⚡</span>
+            <div>
+                <div class="badge-title">AI prioritized 6 tasks</div>
+                <div class="badge-sub">Just now</div>
+            </div>
+        </div>
+        <div class="float-badge badge-b">
+            <span class="badge-icon">🎯</span>
+            <div>
+                <div class="badge-title">Sprint goal: 94% complete</div>
+                <div class="badge-sub">2 days left</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===================== LOGOS ===================== -->
+    <div class="logo-strip">
+        <p class="logo-strip-label">Trusted by engineering teams at</p>
+        <div class="logo-row">
+            <span>Vercel</span><span>Linear</span><span>Loom</span>
+            <span>Figma</span><span>Raycast</span><span>Cal.com</span>
+        </div>
+    </div>
+
+    <!-- ===================== FEATURES (BENTO) ===================== -->
+    <section class="bento-section" id="features">
+        <div class="section-cap">
+            <div class="eyebrow-tag">Features</div>
+            <h2 class="section-h2">One workspace.<br><span class="g-text">Zero chaos.</span></h2>
+            <p class="section-p">Everything your team needs to move fast — tasks, chat, goals and analytics, powered by
+                AI.</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- Big card -->
+            <div class="bento-card span2 card-ai">
+                <div class="bento-icon-wrap"><span class="feature-icon">🧠</span></div>
+                <div class="bento-label">AI Task Intelligence</div>
+                <h3>Your backlog, automatically prioritized.</h3>
+                <p>FlowSync's AI reads your sprint context and reshuffles priorities in real-time — before blockers
+                    become problems.</p>
+                <div class="ai-pill-row">
+                    <div class="ai-pill">🧠 Analyzing sprint 14…</div>
+                    <div class="ai-pill dim">↑ Moving "API integration" to top</div>
+                    <div class="ai-pill dim">⚠ Flagging: deadline risk detected</div>
+                </div>
+            </div>
+
+            <!-- Tall card -->
+            <div class="bento-card card-inbox">
+                <div class="bento-icon-wrap"><span class="feature-icon">💬</span></div>
+                <div class="bento-label">Unified Inbox</div>
+                <h3>One feed.<br>All context.</h3>
+                <p>Slack, GitHub, Linear — every notification, threaded and smart-filtered.</p>
+                <div class="inbox-preview">
+                    <div class="inbox-item">
+                        <span class="inbox-src gh">GH</span>
+                        <div class="inbox-body">
+                            <div class="inbox-title">PR #142 merged</div>
+                            <div class="inbox-meta">feat: AI task sorter · 2m ago</div>
+                        </div>
+                    </div>
+                    <div class="inbox-item">
+                        <span class="inbox-src sl">SL</span>
+                        <div class="inbox-body">
+                            <div class="inbox-title">@Ethan review needed</div>
+                            <div class="inbox-meta">#design · 5m ago</div>
+                        </div>
+                    </div>
+                    <div class="inbox-item">
+                        <span class="inbox-src fs">FS</span>
+                        <div class="inbox-body">
+                            <div class="inbox-title">Goal: 94% complete 🎯</div>
+                            <div class="inbox-meta">Sprint 14 · just now</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Small cards row -->
+            <div class="bento-card card-goals">
+                <div class="bento-icon-wrap"><span class="feature-icon">🎯</span></div>
+                <div class="bento-label">OKR Tracking</div>
+                <h3>Goals that actually get hit.</h3>
+                <div class="goal-bars">
+                    <div class="goal-row">
+                        <span>Ship v2.0</span>
+                        <div class="gbar">
+                            <div class="gbar-fill" style="width:82%"></div>
+                        </div>
+                        <span class="gpct">82%</span>
+                    </div>
+                    <div class="goal-row">
+                        <span>10k signups</span>
+                        <div class="gbar">
+                            <div class="gbar-fill g2" style="width:61%"></div>
+                        </div>
+                        <span class="gpct">61%</span>
+                    </div>
+                    <div class="goal-row">
+                        <span>NPS &gt; 60</span>
+                        <div class="gbar">
+                            <div class="gbar-fill g3" style="width:94%"></div>
+                        </div>
+                        <span class="gpct">94%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card card-analytics">
+                <div class="bento-icon-wrap"><span class="feature-icon">📈</span></div>
+                <div class="bento-label">Live Analytics</div>
+                <h3>Velocity at a glance.</h3>
+                <div class="chart-bars">
+                    <div class="bar" style="height:40%"><span>M</span></div>
+                    <div class="bar" style="height:65%"><span>T</span></div>
+                    <div class="bar" style="height:50%"><span>W</span></div>
+                    <div class="bar" style="height:80%"><span>T</span></div>
+                    <div class="bar" style="height:95%; background: linear-gradient(to top,#7c3aed,#a855f7)">
+                        <span>F</span>
+                    </div>
+                    <div class="bar dim" style="height:30%"><span>S</span></div>
+                    <div class="bar dim" style="height:20%"><span>S</span></div>
+                </div>
+                <div class="chart-legend">Tasks completed per day</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="how-section" id="how">
+        <div class="section-cap">
+            <div class="eyebrow-tag">How it works</div>
+            <h2 class="section-h2">Live in <span class="g-text">3 minutes.</span></h2>
+        </div>
+        <div class="steps-row">
+            <div class="step-item">
+                <div class="step-num">01</div>
+                <h3>Connect your stack</h3>
+                <p>Import from Jira, Trello, Linear or Asana in one click. No migration hell.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true">
+                <svg width="40" height="2" viewBox="0 0 40 2">
+                    <line x1="0" y1="1" x2="40" y2="1" stroke="rgba(255,255,255,.12)" stroke-width="1.5"
+                        stroke-dasharray="4 3" />
+                </svg>
+            </div>
+            <div class="step-item">
+                <div class="step-num">02</div>
+                <h3>AI learns your team</h3>
+                <p>FlowSync maps roles, workloads and past sprints to optimize automatically from day one.</p>
+            </div>
+            <div class="step-connector" aria-hidden="true">
+                <svg width="40" height="2" viewBox="0 0 40 2">
+                    <line x1="0" y1="1" x2="40" y2="1" stroke="rgba(255,255,255,.12)" stroke-width="1.5"
+                        stroke-dasharray="4 3" />
+                </svg>
+            </div>
+            <div class="step-item">
+                <div class="step-num">03</div>
+                <h3>Ship faster, together</h3>
+                <p>Real-time goals, fewer meetings. Your team moves at startup speed, every sprint.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials">
+        <div class="testi-grid">
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"FlowSync cut our planning meetings from 3 hours to 20 minutes. The AI prioritization is genuinely
+                    scary-good."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">SR</div>
+                    <div>
+                        <div class="testi-name">Sarah Rodriguez</div>
+                        <div class="testi-role">VP Engineering · Vercel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card featured-card">
+                <div class="stars">★★★★★</div>
+                <p>"We went from 12 tools to 1. Our sprint velocity is up 34% and the team actually looks forward to
+                    standups now."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">JK</div>
+                    <div>
+                        <div class="testi-name">James Kim</div>
+                        <div class="testi-role">CTO · Raycast</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"The OKR tracking alone is worth it. Finally everyone on the team knows what 'done' looks like."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">AL</div>
+                    <div>
+                        <div class="testi-name">Aisha Laurent</div>
+                        <div class="testi-role">Head of Product · Loom</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PRICING ===================== -->
+    <section class="pricing-section" id="pricing">
+        <div class="section-cap">
+            <div class="eyebrow-tag">Pricing</div>
+            <h2 class="section-h2">Simple pricing.<br><span class="g-text">No surprises.</span></h2>
+            <p class="section-p">Start free. Upgrade when your team scales.</p>
+        </div>
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="plan-tier">Free</div>
+                <div class="plan-cost">$0 <span class="per">/mo</span></div>
+                <p class="plan-tagline">Perfect for indie teams & solo founders.</p>
+                <hr class="price-rule">
+                <ul class="plan-list">
+                    <li><span class="li-check">✓</span> Up to 5 members</li>
+                    <li><span class="li-check">✓</span> 15 active tasks</li>
+                    <li><span class="li-check">✓</span> Basic inbox</li>
+                    <li><span class="li-check">✓</span> 7-day history</li>
+                    <li class="li-off"><span>✗</span> AI assistant</li>
+                    <li class="li-off"><span>✗</span> OKR tracking</li>
+                </ul>
+                <a href="#" class="btn-outline-plan">Start for free</a>
+            </div>
+
+            <div class="price-card price-hero">
+                <div class="popular-chip">Most popular</div>
+                <div class="plan-tier">Pro</div>
+                <div class="plan-cost">$29 <span class="per">/mo per team</span></div>
+                <p class="plan-tagline">For startups & growing remote teams.</p>
+                <hr class="price-rule">
+                <ul class="plan-list">
+                    <li><span class="li-check">✓</span> Unlimited members</li>
+                    <li><span class="li-check">✓</span> Unlimited tasks</li>
+                    <li><span class="li-check">✓</span> <strong>AI task assistant</strong></li>
+                    <li><span class="li-check">✓</span> OKR & goal tracking</li>
+                    <li><span class="li-check">✓</span> Advanced analytics</li>
+                    <li><span class="li-check">✓</span> 100GB storage</li>
+                </ul>
+                <a href="#" class="btn-cta-plan">Start free trial</a>
+            </div>
+
+            <div class="price-card">
+                <div class="plan-tier">Enterprise</div>
+                <div class="plan-cost">Custom</div>
+                <p class="plan-tagline">For large orgs with compliance needs.</p>
+                <hr class="price-rule">
+                <ul class="plan-list">
+                    <li><span class="li-check">✓</span> Everything in Pro</li>
+                    <li><span class="li-check">✓</span> SSO / SAML / SCIM</li>
+                    <li><span class="li-check">✓</span> SLA & uptime guarantee</li>
+                    <li><span class="li-check">✓</span> Dedicated Slack channel</li>
+                    <li><span class="li-check">✓</span> Custom integrations</li>
+                    <li><span class="li-check">✓</span> Unlimited storage</li>
+                </ul>
+                <a href="#" class="btn-outline-plan">Talk to sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="cta-banner">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="eyebrow-tag">Get started</div>
+        <h2 class="cta-h2">Ready to actually<br><span class="g-text">ship things?</span></h2>
+        <p class="cta-p">Join 1,200+ teams that replaced their chaos with FlowSync.</p>
+        <div class="cta-actions">
+            <a href="#" class="btn-cta btn-lg">Start for free →</a>
+            <a href="#" class="cta-link">Book a 15-min demo</a>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom:12px">
+                    <svg width="18" height="18" viewBox="0 0 22 22" fill="none">
+                        <rect width="10" height="10" rx="3" fill="#7c3aed" />
+                        <rect x="12" y="0" width="10" height="10" rx="3" fill="#a855f7" opacity=".6" />
+                        <rect x="0" y="12" width="10" height="10" rx="3" fill="#a855f7" opacity=".6" />
+                        <rect x="12" y="12" width="10" height="10" rx="3" fill="#7c3aed" opacity=".3" />
+                    </svg>
+                    FlowSync
+                </div>
+                <p>The AI productivity platform<br>for remote teams.</p>
+                <div class="social-row">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="GitHub">⌥</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+            <div class="footer-cols">
+                <div class="fcol">
+                    <h4>Product</h4>
+                    <a href="#">Features</a><a href="#">Pricing</a><a href="#">Changelog</a><a href="#">Roadmap</a>
+                </div>
+                <div class="fcol">
+                    <h4>Company</h4>
+                    <a href="#">About</a><a href="#">Blog</a><a href="#">Careers</a><a href="#">Press</a>
+                </div>
+                <div class="fcol">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a><a href="#">DPA</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 FlowSync Inc. · Austin, Texas · SOC 2 Type II Certified
+        </div>
+    </footer>
+
+    <script>
+        // Burger menu
+        document.getElementById('burger').addEventListener('click', function () {
+            document.getElementById('mobNav').classList.toggle('open');
+        });
+
+        // Rotating headline word
+        const words = ['ships in.', 'thrives in.', 'scales in.', 'wins in.'];
+        let wi = 0;
+        const el = document.getElementById('rotateWord');
+        if (el) {
+            setInterval(() => {
+                el.style.opacity = '0';
+                setTimeout(() => {
+                    wi = (wi + 1) % words.length;
+                    el.textContent = words[wi];
+                    el.style.opacity = '1';
+                }, 300);
+            }, 2800);
+        }
+
+        // --- Scroll Reveal Logic ---
+        const cards = document.querySelectorAll('.bento-card');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        cards.forEach((card, i) => {
+            card.style.transitionDelay = `${i * 100}ms`;
+            revealObserver.observe(card);
+        });
+    </script>
+</body>
+
+</html>
