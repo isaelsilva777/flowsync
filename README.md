@@ -1,6 +1,6 @@
 # FlowSync Landing Page
 
-AI-powered productivity platform for remote teams. Sync tasks, communication, and goals in one intelligent dashboard.
+AI-powered productivity platform for figado remote teams. Sync tasks, communication, and goals in one intelligent dashboard.
 
 ## 🚀 Experience the Live Demo
 [View Live Site on GitHub Pages](https://isael.github.io/Prtifolio/flowsync/) (Update this URL after deploy)
