@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Instituto ENAFI | Educação Nacional e Formação Integrada</title>
-<meta name="description" content="Instituto ENAFI: mais de 120 cursos profissionalizantes a distância, com certificado válido em todo o Brasil, e EJA para quem precisa concluir o Ensino Médio.">
+<meta name="description" content="Instituto ENAFI: EJA, Cursos Técnicos, Técnico por Competência, Pós-graduação e Cursos Profissionalizantes em um só lugar. Encontre sua formação e fale direto com a nossa equipe.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -101,6 +101,27 @@
   .scroll-track::after{content:""; position:absolute; left:0; top:-100%; width:1px; height:100%; background:hsl(var(--text)); animation:scrollDown 1.6s ease-in-out infinite}
   @keyframes scrollDown{0%{top:-100%} 100%{top:100%}}
   @media (prefers-reduced-motion:reduce){ .hero-bg span, .scroll-track::after{animation:none} }
+
+  .modal-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:44px}
+  .modal-card{display:flex; flex-direction:column; gap:10px; padding:22px 20px; border:1px solid hsl(var(--stroke)); border-radius:16px; background:hsl(var(--surface)); transition:border-color .25s ease,transform .25s ease}
+  .modal-card:hover{border-color:#FB4C17; transform:translateY(-3px)}
+  .modal-card .mc-title{font-weight:600; font-size:.95rem; color:hsl(var(--text))}
+  .modal-card .mc-blurb{color:hsl(var(--muted)); font-size:.82rem; line-height:1.45; flex:1 1 auto}
+  .modal-card .mc-chan{font-size:.66rem; text-transform:uppercase; letter-spacing:.12em; color:hsl(var(--muted)); margin-top:16px}
+  .modal-card .mc-go{margin-top:2px; font-size:.78rem; color:#FB4C17; font-weight:600}
+  @media (max-width:1000px){ .modal-grid{grid-template-columns:repeat(3,1fr)} }
+  @media (max-width:640px){ .modal-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width:420px){ .modal-grid{grid-template-columns:1fr} }
+
+  .contact-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:8px}
+  .contact-grid .item{border:1px solid hsl(var(--stroke)); border-radius:14px; padding:20px; background:hsl(var(--surface))}
+  .contact-grid .item .label{display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; color:hsl(var(--muted)); margin-bottom:8px}
+  .contact-grid .item a, .contact-grid .item p{font-size:.98rem; font-weight:500; margin:0}
+  .quick-links{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
+  .quick-links a{padding:10px 18px; border:1px solid hsl(var(--stroke)); border-radius:999px; font-size:.85rem}
+  .quick-links a:hover{border-color:#FB4C17; color:#FB4C17}
+  @media (max-width:820px){ .contact-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width:480px){ .contact-grid{grid-template-columns:1fr} }
 
   section{padding:96px 0}
   .sec-head{max-width:56ch; margin-bottom:44px}
@@ -234,14 +255,13 @@
     </a>
     <div class="navdiv"></div>
     <nav class="primary" aria-label="Navegação principal">
+      <a href="#modalidades">Modalidades</a>
       <a href="#sobre">Sobre</a>
-      <a href="#eja">EJA</a>
-      <a href="#areas">Áreas</a>
-      <a href="#como-funciona">Como funciona</a>
       <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
     </nav>
     <div class="navdiv"></div>
-    <a class="say-hi" href="https://curso.eadaulas.com/institutoenafi/loja_virtual/contato.php"><span>Fale conosco ↗</span></a>
+    <a class="say-hi" href="https://api.whatsapp.com/send?phone=5531996278664&text=Olá%21%20Gostaria%20de%20mais%20informações%20sobre%20a%20ENAFI."><span>Fale conosco ↗</span></a>
     <label class="nav-toggle-label" for="nav-toggle" aria-label="Abrir menu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
     </label>
@@ -253,21 +273,53 @@
   <section class="hero">
     <div class="hero-bg" aria-hidden="true"><span></span><span></span></div>
     <div class="wrap">
-      <p class="eyebrow">Educação nacional e formação integrada</p>
-      <h1>Formação organizada para você estudar do seu jeito.</h1>
-      <p class="role-line">Estude <em class="sr" id="roleWord">Administrativo</em> onde você estiver.</p>
-      <p class="lead">O Instituto ENAFI reúne cursos profissionalizantes em cinco áreas de formação, com certificado válido em todo o território nacional e ensino a distância flexível.</p>
-      <div class="cta-row">
-        <a class="btn-roll is-solid" href="#areas">
-          <span class="roll"><span class="roll-inner"><span>Ver formações</span><span>Ver formações</span></span></span>
+      <p class="eyebrow">ENAFI · Instituição de Ensino</p>
+      <h1>Encontre a formação ideal para você.</h1>
+      <p class="role-line">Você está buscando <em class="sr" id="roleWord">EJA</em>?</p>
+      <p class="lead">A ENAFI reúne diferentes possibilidades de formação em um só lugar. Escolha a sua abaixo e siga direto para quem pode te atender.</p>
+      <div class="cta-row reveal">
+        <a class="btn-roll is-solid" href="https://api.whatsapp.com/send?phone=5531996278664&text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20ENAFI." target="_blank" rel="noopener">
+          <span class="roll"><span class="roll-inner"><span>Falar no WhatsApp</span><span>Falar no WhatsApp</span></span></span>
           <span class="icon-circle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="btn-roll is-outline" href="https://api.whatsapp.com/send?phone=5531996278664">
-          <span class="roll"><span class="roll-inner"><span>Falar com o suporte</span><span>Falar com o suporte</span></span></span>
+        <a class="btn-roll is-outline" href="https://curso.eadaulas.com/institutoenafi" target="_blank" rel="noopener">
+          <span class="roll"><span class="roll-inner"><span>Ver cursos na plataforma</span><span>Ver cursos na plataforma</span></span></span>
           <span class="icon-circle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </div>
-      <p class="muted" style="margin-top:28px; font-size:.9rem">Precisa concluir o Ensino Médio? <a href="#eja" style="color:#FB4C17; font-weight:600">Conheça o EJA da ENAFI</a></p>
+      <p class="reveal" style="margin-top:36px; font-size:.8rem; text-transform:uppercase; letter-spacing:.15em; color:hsl(var(--muted))">Ou escolha por modalidade</p>
+      <div class="modal-grid reveal-group" id="modalidades">
+        <a class="modal-card reveal" href="https://api.whatsapp.com/send?phone=5531996278664&text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20EJA%20da%20ENAFI." target="_blank" rel="noopener">
+          <span class="mc-title">EJA</span>
+          <span class="mc-blurb">Conclua o Ensino Médio com orientação, no seu ritmo.</span>
+          <span class="mc-chan">WhatsApp</span>
+          <span class="mc-go">Falar agora →</span>
+        </a>
+        <a class="modal-card reveal" href="https://api.whatsapp.com/send?phone=5531996278664&text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20os%20Cursos%20T%C3%A9cnicos%20da%20ENAFI." target="_blank" rel="noopener">
+          <span class="mc-title">Cursos Técnicos</span>
+          <span class="mc-blurb">Qualificação técnica reconhecida em uma área específica.</span>
+          <span class="mc-chan">WhatsApp</span>
+          <span class="mc-go">Falar agora →</span>
+        </a>
+        <a class="modal-card reveal" href="https://api.whatsapp.com/send?phone=5531996278664&text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20T%C3%A9cnico%20por%20Compet%C3%AAncia%20da%20ENAFI." target="_blank" rel="noopener">
+          <span class="mc-title">Técnico por Competência</span>
+          <span class="mc-blurb">Reconhecimento da sua experiência prática.</span>
+          <span class="mc-chan">WhatsApp</span>
+          <span class="mc-go">Falar agora →</span>
+        </a>
+        <a class="modal-card reveal" href="https://api.whatsapp.com/send?phone=5531996278664&text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20da%20ENAFI." target="_blank" rel="noopener">
+          <span class="mc-title">Pós-graduação</span>
+          <span class="mc-blurb">Para quem já concluiu a graduação e quer se especializar.</span>
+          <span class="mc-chan">WhatsApp</span>
+          <span class="mc-go">Falar agora →</span>
+        </a>
+        <a class="modal-card reveal" href="https://curso.eadaulas.com/institutoenafi" target="_blank" rel="noopener">
+          <span class="mc-title">Cursos Profissionalizantes</span>
+          <span class="mc-blurb">Mais de 120 cursos, já disponíveis na plataforma.</span>
+          <span class="mc-chan">Plataforma</span>
+          <span class="mc-go">Ver cursos →</span>
+        </a>
+      </div>
     </div>
     <div class="scroll-ind"><span>ROLAR</span><div class="scroll-track"></div></div>
   </section>
@@ -323,14 +375,53 @@
 
       <div class="cta-row reveal" style="margin-top:40px">
         <a class="btn-roll is-solid" href="https://api.whatsapp.com/send?phone=5531996278664&amp;text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20EJA%20da%20ENAFI."><span class="roll"><span class="roll-inner"><span>Falar com a equipe sobre o EJA</span><span>Falar com a equipe sobre o EJA</span></span></span><span class="icon-circle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-        <a class="btn-roll is-outline" href="#areas"><span class="roll"><span class="roll-inner"><span>Ver os cursos profissionalizantes</span><span>Ver os cursos profissionalizantes</span></span></span><span class="icon-circle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="btn-roll is-outline" href="#profissionalizantes"><span class="roll"><span class="roll-inner"><span>Ver os cursos profissionalizantes</span><span>Ver os cursos profissionalizantes</span></span></span><span class="icon-circle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
       </div>
     </div>
   </section>
 
-  <section id="areas">
+  <section id="tecnicos">
     <div class="wrap">
-      <div class="sec-head reveal"><div class="tag"><i></i><span>Áreas de formação</span></div><h2>Formações em destaque</h2><p>Escolha a área que mais se aproxima do que você quer estudar.</p></div>
+      <div class="sec-head reveal"><div class="tag"><i></i><span>Cursos Técnicos</span></div><h2>Cursos Técnicos</h2><p>Qualificação técnica reconhecida em uma área específica, com atendimento direto da nossa equipe.</p></div>
+      <div class="reveal" style="max-width:64ch">
+        <p class="muted">Os cursos técnicos da ENAFI são voltados para quem busca uma formação mais aprofundada e direcionada, com foco técnico em uma área específica.</p>
+        <p class="note">Cursos disponíveis, carga horária, requisitos e valores são apresentados diretamente pela nossa equipe, de acordo com a sua área de interesse.</p>
+      </div>
+      <div class="cta-row reveal" style="margin-top:32px">
+        <a class="btn-roll is-solid" href="https://api.whatsapp.com/send?phone=5531996278664&text=Olá%21%20Quero%20saber%20mais%20sobre%20os%20Cursos%20Técnicos%20da%20ENAFI."><span class="roll"><span class="roll-inner"><span>Falar sobre Cursos Técnicos</span><span>Falar sobre Cursos Técnicos</span></span></span><span class="icon-circle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="competencia">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="tag"><i></i><span>Técnico por Competência</span></div><h2>Técnico por Competência</h2><p>Uma modalidade própria, separada dos cursos técnicos tradicionais.</p></div>
+      <div class="reveal" style="max-width:64ch">
+        <p class="muted">O Técnico por Competência é pensado para quem já tem experiência prática na área e busca uma forma de reconhecimento dessa qualificação — uma proposta diferente da de um curso técnico tradicional.</p>
+        <p class="note">Critérios, processo de avaliação e documentação necessária são explicados pela nossa equipe, de acordo com a sua situação.</p>
+      </div>
+      <div class="cta-row reveal" style="margin-top:32px">
+        <a class="btn-roll is-solid" href="https://api.whatsapp.com/send?phone=5531996278664&text=Olá%21%20Quero%20saber%20mais%20sobre%20o%20Técnico%20por%20Competência%20da%20ENAFI."><span class="roll"><span class="roll-inner"><span>Falar sobre Técnico por Competência</span><span>Falar sobre Técnico por Competência</span></span></span><span class="icon-circle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pos">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="tag"><i></i><span>Pós-graduação</span></div><h2>Pós-graduação</h2><p>Para quem já concluiu a graduação e quer se especializar.</p></div>
+      <div class="reveal" style="max-width:64ch">
+        <p class="muted">A pós-graduação da ENAFI é voltada para quem já tem um diploma de graduação e busca aprofundar ou se especializar em uma área específica.</p>
+        <p class="note">Áreas disponíveis, carga horária e formato são apresentados pela nossa equipe, de acordo com o seu perfil.</p>
+      </div>
+      <div class="cta-row reveal" style="margin-top:32px">
+        <a class="btn-roll is-solid" href="https://api.whatsapp.com/send?phone=5531996278664&text=Olá%21%20Quero%20saber%20mais%20sobre%20a%20Pós-graduação%20da%20ENAFI."><span class="roll"><span class="roll-inner"><span>Falar sobre Pós-graduação</span><span>Falar sobre Pós-graduação</span></span></span><span class="icon-circle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="profissionalizantes">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="tag"><i></i><span>Cursos Profissionalizantes</span></div><h2>Escolha entre mais de 120 cursos</h2><p>Organizados em cinco áreas, com certificado válido em todo o Brasil e matrícula direto na plataforma.</p></div>
       <div class="bento reveal-group">
         <div class="card reveal">
           <h3>Administrativo</h3><p>Cursos voltados a rotinas, processos e funções administrativas.</p>
@@ -374,7 +465,7 @@
   <section>
     <div class="wrap"><div class="stats reveal-group">
       <div class="reveal"><strong>120+</strong><span>Cursos profissionalizantes</span></div>
-      <div class="reveal"><strong>5</strong><span>Áreas de formação</span></div>
+      <div class="reveal"><strong>5</strong><span>Áreas nos cursos profissionalizantes</span></div>
       <div class="reveal"><strong>100%</strong><span>Cursos a distância</span></div>
     </div></div>
   </section>
@@ -416,9 +507,29 @@
 </main>
 
 <div class="marquee-wrap"><div class="marquee-track">
-  <span>CERTIFICADO VÁLIDO EM TODO O BRASIL •</span><span>ENSINO A DISTÂNCIA •</span><span>CINCO ÁREAS DE FORMAÇÃO •</span>
-  <span>CERTIFICADO VÁLIDO EM TODO O BRASIL •</span><span>ENSINO A DISTÂNCIA •</span><span>CINCO ÁREAS DE FORMAÇÃO •</span>
+  <span>EJA •</span><span>CURSOS TÉCNICOS •</span><span>TÉCNICO POR COMPETÊNCIA •</span><span>PÓS-GRADUAÇÃO •</span><span>CURSOS PROFISSIONALIZANTES •</span>
+  <span>EJA •</span><span>CURSOS TÉCNICOS •</span><span>TÉCNICO POR COMPETÊNCIA •</span><span>PÓS-GRADUAÇÃO •</span><span>CURSOS PROFISSIONALIZANTES •</span>
 </div></div>
+
+<section id="contato">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="tag"><i></i><span>Institucional</span></div><h2>Fale com a ENAFI</h2><p>Atendimento direto pelos nossos canais oficiais. A ENAFI oferece formação a distância organizada, com acompanhamento do início ao fim.</p></div>
+    <div class="contact-grid reveal-group">
+      <div class="item reveal"><span class="label">Telefone</span><a href="tel:+5531996278664">(31) 99627-8664</a></div>
+      <div class="item reveal"><span class="label">WhatsApp</span><a href="https://api.whatsapp.com/send?phone=5531996278664">(31) 99627-8664</a></div>
+      <div class="item reveal"><span class="label">Endereço</span><p>Rua Cláudio Manoel, 326 — Funcionários, Belo Horizonte/MG</p></div>
+      <div class="item reveal"><span class="label">CNPJ</span><p>61.088.018/0001-81</p></div>
+    </div>
+    <p class="reveal" style="margin-top:12px; font-size:.85rem; color:hsl(var(--muted))">E-mail em atualização — assim que você me passar o endereço oficial, eu adiciono aqui.</p>
+    <div class="quick-links reveal">
+      <a href="#eja">EJA</a>
+      <a href="#tecnicos">Cursos Técnicos</a>
+      <a href="#competencia">Técnico por Competência</a>
+      <a href="#pos">Pós-graduação</a>
+      <a href="#profissionalizantes">Cursos Profissionalizantes</a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
@@ -431,14 +542,14 @@
         <p class="muted" style="margin-top:16px; max-width:30ch; font-size:.9rem">Instituto ENAFI — Educação Nacional e Formação Integrada.</p>
         <div class="avail"><span class="dot"></span>Professor virtual nos cursos, 24 horas</div>
       </div>
-      <div><h4>Áreas</h4><ul>
-        <li><a href="https://curso.eadaulas.com/institutoenafi/loja_virtual/cursos.php?id=ADMINISTRATIVO">Administrativo</a></li>
-        <li><a href="https://curso.eadaulas.com/institutoenafi/loja_virtual/cursos.php?id=IDIOMAS">Idiomas</a></li>
-        <li><a href="https://curso.eadaulas.com/institutoenafi/loja_virtual/cursos.php?id=INFORM%C3%81TICA%20E%20TECNOLOGIA">Tecnologia</a></li>
-        <li><a href="https://curso.eadaulas.com/institutoenafi/loja_virtual/cursos.php?id=PREPARAT%C3%93RIOS">Preparatórios</a></li>
+      <div><h4>Formações</h4><ul>
+        <li><a href="#eja">EJA</a></li>
+        <li><a href="#tecnicos">Cursos Técnicos</a></li>
+        <li><a href="#competencia">Técnico por Competência</a></li>
+        <li><a href="#pos">Pós-graduação</a></li>
+        <li><a href="#profissionalizantes">Cursos Profissionalizantes</a></li>
       </ul></div>
       <div><h4>Institucional</h4><ul>
-        <li><a href="#eja">EJA — Ensino Médio</a></li>
         <li><a href="https://curso.eadaulas.com/institutoenafi/loja_virtual/quemsomos.php">Quem somos</a></li>
         <li><a href="https://curso.eadaulas.com/institutoenafi/loja_virtual/verificar_certificado.php">Verificar certificado</a></li>
         <li><a href="https://curso.eadaulas.com/institutoenafi/loja_virtual/politica.php">Política de privacidade</a></li>
@@ -482,7 +593,7 @@
   function onScroll(){ if(header) header.classList.toggle('is-scrolled', window.scrollY>8); }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
-  var roles = ['Administrativo','Idiomas','Tecnologia','Preparatórios','Diversas Áreas'];
+  var roles = ['EJA','Cursos Técnicos','Técnico por Competência','Pós-graduação','Cursos Profissionalizantes'];
   var roleEl = document.getElementById('roleWord'); var ri = 0;
   if (!reduced) setInterval(function(){ ri=(ri+1)%roles.length; roleEl.textContent = roles[ri]; roleEl.style.animation='none'; void roleEl.offsetWidth; roleEl.style.animation=''; }, 2000);
   else roleEl.textContent = roles[0];
